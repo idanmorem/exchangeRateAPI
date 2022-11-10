@@ -21,7 +21,7 @@ def range_limited_float_type(arg):
 def cli_arguments_reader() -> float:
     parser = argparse.ArgumentParser(description='Currency rate')
     parser.add_argument('threshold', type=range_limited_float_type, default=False,
-                        help='The rate threshold')
+                        help='The rate threshold between two currencies')
 
     return parser.parse_args().threshold
 
